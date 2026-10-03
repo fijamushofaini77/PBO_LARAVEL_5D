@@ -1,6 +1,6 @@
 # P01 — Red Menstruasi: Database & Relasi
 
-- **Nama:** fijamushofaini77
+- **Nama:** Fija Mushofaini
 - **NPM:** 2410010375
 - **Kelas:** TI 5D REG BJB
 - **Branch:** `feature/2410010375`
