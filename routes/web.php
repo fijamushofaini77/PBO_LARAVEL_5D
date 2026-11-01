@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 // 1. Dashboard Utama (shadcn dashboard-01 pink)
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-// 2. Resource Route Master Data Periode (Modul SIMTIKUM Pertemuan 5)
+// 2. Resource Route Master Data Periode
 Route::resource('periode', PeriodeController::class)->except('show');
 
 // 3. Resource Route Fitur Aplikasi Red Menstruasi

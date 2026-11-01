@@ -351,11 +351,11 @@
 
                 {{-- Master Data Quick Connector Grid --}}
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    {{-- Box 1: Periode SIMTIKUM --}}
+                    {{-- Box 1: Periode --}}
                     <div class="perk-card p-6 bg-white hover:border-[#f43f5e] transition-colors flex flex-col justify-between">
                         <div>
                             <div class="flex items-center justify-between">
-                                <span class="eyebrow-label">Periode SIMTIKUM</span>
+                                <span class="eyebrow-label">Data Periode</span>
                                 <span class="w-8 h-8 rounded-full bg-rose-50 text-[#f43f5e] flex items-center justify-center text-xs">
                                     <i class="bi bi-calendar3"></i>
                                 </span>

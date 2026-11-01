@@ -3,7 +3,7 @@
 - **Nama:** Fija Mushofaini
 - **NPM:** 2410010375
 - **Kelas:** TI 5D REG BJB
-- **Branch:** `feature/2410010375`
+- **Branch:** `feature/red-menstruasi`
 - **Assignment:** 1
 
 Aplikasi pelacak menstruasi (terinspirasi Flo): catat periode, gejala, mood, jurnal, log harian, obat, pengingat, serta prediksi haid, ovulasi, dan masa subur.

@@ -60,7 +60,7 @@
                 </a>
             </div>
 
-            {{-- Group 2: Data Master (Collapsible Treeview per Modul 5 SIMTIKUM) --}}
+            {{-- Group 2: Data Master (Collapsible Treeview) --}}
             <div class="space-y-1" x-data="{ openMaster: true }">
                 <div class="flex items-center justify-between px-2 pb-1 cursor-pointer select-none"
                      @click="openMaster = !openMaster"
@@ -71,14 +71,14 @@
                 </div>
 
                 <div class="space-y-1" x-show="!sidebarExpanded || openMaster">
-                    {{-- Periode SIMTIKUM (Modul 5) --}}
+                    {{-- Periode --}}
                     <a href="{{ route('periode.index') }}"
                        class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-medium transition-all group {{ request()->routeIs('periode.*') ? 'bg-rose-100 text-rose-900 font-medium border border-rose-200' : 'text-[#14140f] hover:bg-[#fff1f2] hover:text-[#f43f5e]' }}"
                        :class="!sidebarExpanded ? 'justify-center' : 'justify-between'"
-                       :title="!sidebarExpanded ? 'Master Periode (Modul 5)' : ''">
+                       :title="!sidebarExpanded ? 'Master Periode' : ''">
                         <div class="flex items-center gap-2.5 min-w-0">
                             <i class="bi bi-calendar3 text-sm {{ request()->routeIs('periode.*') ? 'text-rose-600' : 'text-zinc-500' }}"></i>
-                            <span x-show="sidebarExpanded" x-cloak>Periode (Modul 5)</span>
+                            <span x-show="sidebarExpanded" x-cloak>Periode</span>
                         </div>
                         <span x-show="sidebarExpanded" x-cloak class="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-rose-200 text-rose-800">
                             CRUD

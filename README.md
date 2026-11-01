@@ -1,6 +1,6 @@
-# Red Menstruasi — SIMTIKUM Dashboard Admin
+# Red Menstruasi — Admin Dashboard
 
-> **Modul 5 PBO Laravel** — Aplikasi pencatatan & monitoring siklus menstruasi dengan dashboard admin interaktif berbasis pink design system.
+> **PBO Laravel** — Aplikasi pencatatan & monitoring siklus menstruasi dengan dashboard admin interaktif berbasis pink design system.
 
 | | |
 |---|---|
@@ -9,13 +9,13 @@
 | **Kelas** | TI 5D REG BJB |
 | **Phase** | P01: CRUD Dashboard Admin + Tabel Periode |
 | **Status** | ✅ Done (2026-11-01) |
-| **Fork / branch** | [fijamushofaini77/PBO_LARAVEL_5D](https://github.com/fijamushofaini77/PBO_LARAVEL_5D) · [`feature/2410010375`](https://github.com/fijamushofaini77/PBO_LARAVEL_5D/tree/feature/2410010375) |
+| **Fork / branch** | [fijamushofaini77/PBO_LARAVEL_5D](https://github.com/fijamushofaini77/PBO_LARAVEL_5D) · [`feature/red-menstruasi`](https://github.com/fijamushofaini77/PBO_LARAVEL_5D/tree/feature/red-menstruasi) |
 
 ---
 
 ## Tentang Aplikasi
 
-**Red Menstruasi** adalah aplikasi admin SIMTIKUM berbasis Laravel untuk mengelola data siklus menstruasi. Dibangun dengan:
+**Red Menstruasi** adalah aplikasi admin berbasis Laravel untuk mengelola data siklus menstruasi. Dibangun dengan:
 
 - **Backend:** Laravel 11, Eloquent ORM, MySQL (`pbo_laravel_5d`)
 - **Frontend:** Tailwind CSS v4, Alpine.js v3, shadcn/ui pattern (dashboard-01 + sidebar-07)

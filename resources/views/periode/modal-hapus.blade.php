@@ -1,4 +1,4 @@
-{{-- Modal Hapus Periode (Modul SIMTIKUM Pertemuan 5) --}}
+{{-- Modal Hapus Periode --}}
 <div id="modal-hapus-{{ $periode->id }}" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-zinc-900/60 backdrop-blur-xs hidden" role="dialog" aria-modal="true" aria-labelledby="modal-hapus-label-{{ $periode->id }}">
     <div class="relative w-full max-w-md bg-white rounded-2xl shadow-2xl border border-rose-100 overflow-hidden animate-scale-in text-left">
         {{-- Header --}}

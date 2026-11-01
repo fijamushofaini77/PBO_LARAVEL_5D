@@ -116,20 +116,6 @@
                 {{-- Yield View Content --}}
                 @yield('content')
             </main>
-
-            {{-- Footer per docs/design (Warm parchment / dark footer moment) --}}
-            <footer class="mt-auto py-6 px-8 border-t border-[#fed7dc]/60 bg-white text-xs text-[#6e6e64] flex flex-col sm:flex-row items-center justify-between gap-3">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-2.5 rounded-full bg-[#f43f5e]"></span>
-                    <span class="font-medium text-[#14140f]">Red Menstruasi</span>
-                    <span>&bull; Tugas Praktikum PBO 2 (Laravel 5)</span>
-                </div>
-                <div class="flex items-center gap-4 text-[11px]">
-                    <span>Penulis: <strong class="text-[#14140f] font-medium">Fija Mushofaini</strong></span>
-                    <span>NPM: <code class="font-mono bg-rose-50 px-1.5 py-0.5 rounded text-rose-700 border border-rose-100">2410010375</code></span>
-                    <span>Kelas: <strong class="text-[#14140f] font-medium">TI 5D REG BJB</strong></span>
-                </div>
-            </footer>
         </div>
     </div>
 

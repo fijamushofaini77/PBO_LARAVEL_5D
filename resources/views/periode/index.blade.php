@@ -5,7 +5,7 @@
 @section('breadcrumb')
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-2">
         <div>
-            <div class="eyebrow-label mb-1">Modul 5 &bull; SIMTIKUM PBO 2</div>
+            <div class="eyebrow-label mb-1">Master Data</div>
             <h1 class="text-2xl font-medium heading-display text-[#14140f] flex items-center gap-2.5">
                 <span>Master Data Periode</span>
                 <span class="text-xs px-3 py-0.5 rounded-full bg-[#fff1f2] text-[#f43f5e] font-medium border border-[#fecdd3]">
