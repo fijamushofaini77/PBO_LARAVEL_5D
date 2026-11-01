@@ -12,66 +12,19 @@
         {{-- ========================================== --}}
         {{-- 1. Workspace Switcher Header (sidebar-07) --}}
         {{-- ========================================== --}}
-        <div class="h-16 flex items-center border-b border-[#fed7dc]/80 px-3 relative"
-             x-data="{ teamMenuOpen: false }">
-
-            <button type="button"
-                    @click="teamMenuOpen = !teamMenuOpen"
-                    class="w-full flex items-center rounded-[18px] p-2 hover:bg-rose-50/70 transition-colors text-left"
-                    :class="!sidebarExpanded ? 'justify-center' : 'justify-between'">
-
+        <div class="h-16 flex items-center border-b border-[#fed7dc]/80 px-3">
+            <div class="w-full flex items-center rounded-[18px] p-2"
+                 :class="!sidebarExpanded ? 'justify-center' : ''">
                 <div class="flex items-center gap-2.5 min-w-0">
                     <div class="w-9 h-9 rounded-2xl bg-[#f43f5e] text-white flex items-center justify-center font-bold text-sm shrink-0">
                         <i class="bi bi-droplet-half"></i>
                     </div>
                     <div class="flex flex-col min-w-0" x-show="sidebarExpanded" x-cloak>
-                        <span class="text-xs font-semibold text-[#14140f] truncate tracking-tight flex items-center gap-1.5">
+                        <span class="text-xs font-semibold text-[#14140f] truncate tracking-tight">
                             Red Menstruasi
                         </span>
                         <span class="text-[10px] text-[#6e6e64] truncate">TI 5D &bull; 2410010375</span>
                     </div>
-                </div>
-
-                <div class="text-zinc-400" x-show="sidebarExpanded" x-cloak>
-                    <i class="bi bi-chevron-expand text-xs"></i>
-                </div>
-            </button>
-
-            {{-- Workspace Dropdown Menu --}}
-            <div x-show="teamMenuOpen"
-                 x-cloak
-                 @click.outside="teamMenuOpen = false"
-                 x-transition:enter="ease-out duration-150"
-                 x-transition:enter-start="opacity-0 translate-y-1"
-                 x-transition:enter-end="opacity-100 translate-y-0"
-                 x-transition:leave="ease-in duration-100"
-                 x-transition:leave-start="opacity-100 translate-y-0"
-                 x-transition:leave-end="opacity-0 translate-y-1"
-                 class="absolute top-16 left-3 w-60 bg-white rounded-[20px] border border-[#fed7dc] shadow-xl p-2 z-50 space-y-1">
-
-                <div class="px-2.5 py-1.5 text-[10px] font-semibold text-[#6e6e64] uppercase tracking-[0.1em]">
-                    Pilih Workspace
-                </div>
-
-                <div class="p-2 rounded-xl bg-rose-50 text-rose-900 flex items-center justify-between">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-[#f43f5e]"></span>
-                        <div class="text-xs font-semibold">Red Menstruasi (Flo)</div>
-                    </div>
-                    <i class="bi bi-check-lg text-xs font-bold text-rose-600"></i>
-                </div>
-
-                <div class="p-2 rounded-xl hover:bg-zinc-50 text-zinc-700 flex items-center justify-between text-xs cursor-pointer">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-zinc-400"></span>
-                        <div>SIMTIKUM Modul 5</div>
-                    </div>
-                    <span class="text-[10px] font-mono text-zinc-400">Aktif</span>
-                </div>
-
-                <div class="pt-2 border-t border-zinc-100 px-2 text-[10px] text-zinc-500 flex items-center justify-between">
-                    <span>Database: MySQL</span>
-                    <span class="font-mono text-emerald-600">pbo_laravel_5d</span>
                 </div>
             </div>
         </div>
@@ -189,68 +142,5 @@
             </div>
         </div>
 
-        {{-- ========================================== --}}
-        {{-- 3. Footer User Profile Card (sidebar-07 signature) --}}
-        {{-- ========================================== --}}
-        <div class="p-3 border-t border-[#fed7dc]/80 relative"
-             x-data="{ userMenuOpen: false }">
-
-            <button type="button"
-                    @click="userMenuOpen = !userMenuOpen"
-                    class="w-full flex items-center rounded-[20px] p-2 hover:bg-rose-50/70 border border-[#fed7dc] transition-all text-left bg-[#fdfafb]"
-                    :class="!sidebarExpanded ? 'justify-center' : 'justify-between'">
-
-                <div class="flex items-center gap-2.5 min-w-0">
-                    <div class="w-8 h-8 rounded-full bg-[#f43f5e] text-white font-bold text-xs flex items-center justify-center shrink-0">
-                        FM
-                    </div>
-                    <div class="flex flex-col min-w-0" x-show="sidebarExpanded" x-cloak>
-                        <span class="text-xs font-semibold text-[#14140f] truncate">Fija Mushofaini</span>
-                        <span class="text-[10px] text-[#6e6e64] truncate">2410010375 (Admin)</span>
-                    </div>
-                </div>
-
-                <i class="bi bi-three-dots text-zinc-400" x-show="sidebarExpanded" x-cloak></i>
-            </button>
-
-            {{-- User Popover Menu --}}
-            <div x-show="userMenuOpen"
-                 x-cloak
-                 @click.outside="userMenuOpen = false"
-                 x-transition:enter="ease-out duration-150"
-                 x-transition:enter-start="opacity-0 -translate-y-1"
-                 x-transition:enter-end="opacity-100 translate-y-0"
-                 x-transition:leave="ease-in duration-100"
-                 x-transition:leave-start="opacity-100 translate-y-0"
-                 x-transition:leave-end="opacity-0 -translate-y-1"
-                 class="absolute bottom-18 left-3 w-60 bg-white rounded-[22px] border border-[#fed7dc] shadow-2xl p-3 z-50 space-y-2">
-
-                <div class="flex items-center gap-2.5 pb-2 border-b border-zinc-100">
-                    <div class="w-8 h-8 rounded-full bg-[#f43f5e] text-white font-bold text-xs flex items-center justify-center">
-                        FM
-                    </div>
-                    <div class="flex flex-col min-w-0">
-                        <span class="text-xs font-semibold text-[#14140f] truncate">Fija Mushofaini</span>
-                        <span class="text-[10px] text-zinc-500 font-mono">fijamushofaini77@gmail.com</span>
-                    </div>
-                </div>
-
-                <div class="space-y-1 text-xs">
-                    <div class="p-2 rounded-xl text-zinc-700 hover:bg-rose-50 flex items-center gap-2 cursor-pointer">
-                        <i class="bi bi-person text-sm text-rose-500"></i>
-                        <span>Profil Mahasiswa (TI 5D)</span>
-                    </div>
-                    <div class="p-2 rounded-xl text-zinc-700 hover:bg-rose-50 flex items-center gap-2 cursor-pointer"
-                         @click="toggleSidebar(); userMenuOpen = false">
-                        <i class="bi bi-layout-sidebar text-sm text-rose-500"></i>
-                        <span x-text="sidebarExpanded ? 'Kecilkan Sidebar (Icon Only)' : 'Perluas Sidebar'"></span>
-                    </div>
-                    <a href="http://localhost:8081" target="_blank" class="p-2 rounded-xl text-emerald-700 hover:bg-emerald-50 flex items-center gap-2">
-                        <i class="bi bi-server text-sm"></i>
-                        <span>Buka phpMyAdmin</span>
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </aside>
