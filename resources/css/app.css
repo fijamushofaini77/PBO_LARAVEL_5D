@@ -1,9 +1,132 @@
 @import 'tailwindcss';
 
+@source '../views/**/*.blade.php';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 
+:root {
+    /* Colors from docs/design adapted to Pink */
+    --color-pink-primary: #f43f5e;
+    --color-pink-primary-hover: #e11d48;
+    --color-pink-accent: #fb7185;
+    --color-off-black-ink: #14140f;
+    --color-off-white-canvas: #fdfafb;
+    --color-pure-white: #ffffff;
+    --color-ash: #e7dedf;
+    --color-graphite: #6e6e64;
+    --color-deep-charcoal: #241d1f;
+    --color-stone: #9e9193;
+    --color-smoke: #c9bfc1;
+
+    /* Spacing & Radii per docs/design */
+    --radius-cards: 28px;
+    --radius-buttons: 28px;
+    --radius-pills: 9999px;
+    --radius-inputs: 8px;
+    --radius-inner: 18px;
+}
+
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --color-pink-primary: #f43f5e;
+    --color-pink-primary-hover: #e11d48;
+    --color-pink-accent: #fb7185;
+    --color-ink-main: #14140f;
+    --color-ink-muted: #6e6e64;
+    --color-ink-stone: #9e9193;
+    --color-canvas-bg: #fdfafb;
+    --color-card-bg: #ffffff;
+    --color-card-parchment: #fcf6f7;
+    --color-border-pink: #fed7dc;
+    --color-border-ash: #e7dedf;
+}
+
+/* docs/design strict rules: no fuzzy box shadows, purely tonal contrast */
+.perk-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border-pink);
+    border-radius: 28px;
+    box-shadow: none;
+}
+
+.perk-card-parchment {
+    background-color: var(--color-card-parchment);
+    border: 1px solid var(--color-border-pink);
+    border-radius: 28px;
+    box-shadow: none;
+}
+
+.perk-card-dark {
+    background-color: var(--color-deep-charcoal);
+    border-radius: 28px;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.btn-pink-pill {
+    background-color: #f43f5e;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    transition: all 0.15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.btn-pink-pill:hover {
+    background-color: #e11d48;
+}
+
+.btn-ghost-pill {
+    background-color: transparent;
+    color: #14140f;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    transition: all 0.15s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #fed7dc;
+}
+
+.btn-ghost-pill:hover {
+    background-color: #fff1f2;
+    color: #e11d48;
+    border-color: #fecdd3;
+}
+
+.eyebrow-label {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #6e6e64;
+}
+
+.heading-display {
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: #14140f;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #fed7dc;
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f43f5e;
 }
