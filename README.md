@@ -1,57 +1,144 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Red Menstruasi — SIMTIKUM Dashboard Admin
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Modul 5 PBO Laravel** — Aplikasi pencatatan & monitoring siklus menstruasi dengan dashboard admin interaktif berbasis pink design system.
 
-## About Laravel
+| | |
+|---|---|
+| **Mahasiswa** | Fija Mushofaini |
+| **NPM** | 2410010375 |
+| **Kelas** | TI 5D REG BJB |
+| **Phase** | P01: CRUD Dashboard Admin + Tabel Periode |
+| **Status** | ✅ Done (2026-11-01) |
+| **Fork / branch** | [fijamushofaini77/PBO_LARAVEL_5D](https://github.com/fijamushofaini77/PBO_LARAVEL_5D) · [`feature/2410010375`](https://github.com/fijamushofaini77/PBO_LARAVEL_5D/tree/feature/2410010375) |
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tentang Aplikasi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Red Menstruasi** adalah aplikasi admin SIMTIKUM berbasis Laravel untuk mengelola data siklus menstruasi. Dibangun dengan:
 
-## Learning Laravel
+- **Backend:** Laravel 11, Eloquent ORM, MySQL (`pbo_laravel_5d`)
+- **Frontend:** Tailwind CSS v4, Alpine.js v3, shadcn/ui pattern (dashboard-01 + sidebar-07)
+- **Design:** Pink/rose theme — Stop Slop AI (no generic purple/blue gradients)
+- **Font:** Plus Jakarta Sans 400/500
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Pekerjaan yang Dilakukan
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+| Job | Deskripsi | Status |
+|-----|-----------|--------|
+| J1 | Database design + migration tabel `periode` | ✅ Done |
+| J2 | Model `Periode` + Factory + Seeder (4 data) | ✅ Done |
+| J3 | `PeriodeController` — CRUD lengkap (index, create, store, edit, update, destroy) | ✅ Done |
+| J4 | Layout shadcn sidebar-07: collapsible desktop (Ctrl+B), mobile drawer, command palette (Ctrl+K) | ✅ Done |
+| J5 | Dashboard interaktif: stat cards, cycle explorer 28 hari, quick logger (mood + flow + symptom) | ✅ Done |
+| J6 | CRUD views: `periode/`, `cycles/`, `symptoms/`, `medications/`, `reminders/` | ✅ Done |
+| J7 | Feature tests: 28 passed, 80 assertions | ✅ Done |
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Cara Menjalankan
 
 ```bash
-composer require laravel/boost --dev
+# 1. Install dependencies
+composer install
+npm install
 
-php artisan boost:install
+# 2. Konfigurasi environment
+cp .env.example .env
+php artisan key:generate
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Edit `.env` sesuaikan koneksi MySQL:
 
-## Contributing
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=pbo_laravel_5d
+DB_USERNAME=root
+DB_PASSWORD=rahasia123
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+# 3. Migrate & seed database
+php artisan migrate:fresh --seed
 
-## Code of Conduct
+# 4. Build frontend assets
+npm run build
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# 5. Jalankan server
+php artisan serve
+```
 
-## Security Vulnerabilities
+Buka `http://localhost:8000` — dashboard langsung tampil dengan data seeder.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
+
+## Struktur Utama
+
+```
+app/
+├── Http/Controllers/
+│   ├── PeriodeController.php     # CRUD utama modul 5
+│   ├── DashboardController.php   # Dashboard metrics
+│   ├── CycleController.php
+│   ├── SymptomController.php
+│   ├── MedicationController.php
+│   └── ReminderController.php
+├── Models/
+│   ├── Periode.php               # Model tabel periode
+│   └── Cycle.php, Symptom.php, Medication.php, Reminder.php, User.php
+resources/
+├── views/
+│   ├── layouts/
+│   │   ├── app.blade.php                  # Layout utama + Alpine.js
+│   │   └── components/
+│   │       ├── sidebar.blade.php          # Shadcn sidebar-07
+│   │       └── header.blade.php          # Header + notifications
+│   ├── dashboard.blade.php                # Dashboard interaktif
+│   ├── periode/                           # CRUD periode (index, create, edit)
+│   ├── cycles/, symptoms/, medications/, reminders/
+└── css/app.css                            # Pink design tokens
+database/
+├── migrations/                            # Semua migration termasuk periode
+├── seeders/DatabaseSeeder.php             # Rich seeder dengan data Fija
+└── factories/PeriodeFactory.php
+docs/
+├── design/                                # Design tokens & variables
+└── progress/P01-red-menstruasi.md         # Progress report
+tests/Feature/
+└── PeriodeCrudTest.php                    # 12 tests CRUD periode
+```
+
+---
+
+## Hasil Test
+
+```
+php artisan test --compact
+
+Tests:      28 passed
+Assertions: 80 passed
+Duration:   ~236ms
+```
+
+---
+
+## Design System (Stop Slop AI)
+
+| Token | Value |
+|-------|-------|
+| Primary | `#f43f5e` (rose-500) |
+| Canvas | `#fdfafb` (off-white) |
+| Ink | `#14140f` (near-black) |
+| Border | `#fed7dc` (rose-100) |
+| Card radius | `28px` |
+| Button | pill `9999px` |
+| Font weight | 400 / 500 only |
+
+---
 
 ## License
 
