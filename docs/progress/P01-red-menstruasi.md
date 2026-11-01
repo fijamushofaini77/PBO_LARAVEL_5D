@@ -18,7 +18,7 @@ Aplikasi pelacak menstruasi (terinspirasi Flo): catat periode, gejala, mood, jur
 | J4 | Factory semua model + `SymptomSeeder` | ✅ Done | `database/factories/`, `database/seeders/SymptomSeeder.php` |
 | J5 | `CyclePredictionService` (prediksi haid, ovulasi, masa subur, fase siklus) | ✅ Done | `app/Services/CyclePredictionService.php` |
 | J6 | Feature test (prediksi, relasi, seeder) | ✅ Done | `tests/Feature/` |
-| J7 | Controller, route, dan tampilan | ⏳ Planned | — |
+| J7 | Controller, route, dan tampilan | ✅ Done | Dashboard pink (dashboard-01, sidebar-07), CRUD Periode & Siklus |
 
 ## Cara Verifikasi
 
@@ -28,7 +28,7 @@ php artisan migrate:fresh --seed
 php artisan test --compact
 ```
 
-Hasil: 15 test lulus (44 assertion).
+Hasil: 28 test lulus (80 assertion).
 
 ## Catatan
 
