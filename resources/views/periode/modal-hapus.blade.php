@@ -18,7 +18,7 @@
         <div class="p-6">
             <p class="text-xs text-zinc-600 leading-relaxed">
                 Yakin ingin menghapus periode <strong class="text-zinc-900 font-semibold">{{ $periode->periode }}</strong>?
-                Data yang sudah dihapus tidak dapat dikembalikan dari database MySQL.
+                Data yang sudah dihapus tidak dapat dikembalikan.
             </p>
         </div>
 

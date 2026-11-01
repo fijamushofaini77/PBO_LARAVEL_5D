@@ -28,7 +28,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-zinc-900">Daftar Gejala ({{ $symptoms->count() }})</h3>
-                        <p class="text-[11px] text-zinc-500">Tersimpan di tabel MySQL <code class="font-mono text-rose-600">symptoms</code></p>
+                        <p class="text-[11px] text-zinc-500">Katalog gejala untuk pencatatan harian.</p>
                     </div>
                 </div>
 

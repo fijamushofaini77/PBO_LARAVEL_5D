@@ -9,7 +9,7 @@
             <h1 class="text-2xl font-medium heading-display text-[#14140f] flex items-center gap-2.5">
                 <span>Master Data Periode</span>
                 <span class="text-xs px-3 py-0.5 rounded-full bg-[#fff1f2] text-[#f43f5e] font-medium border border-[#fecdd3]">
-                    MySQL Table: periode
+                    Master Periode
                 </span>
             </h1>
             <p class="text-xs text-[#6e6e64] mt-0.5">Kelola data periode akademik untuk praktikum yang terhubung ke phpMyAdmin.</p>
@@ -52,7 +52,7 @@
                         <h3 class="text-base font-medium heading-display text-[#14140f]">
                             Periode ({{ $semua_periode->count() }})
                         </h3>
-                        <p class="text-xs text-[#6e6e64]">Tersimpan di tabel MySQL <code class="font-mono text-[#f43f5e]">periode</code></p>
+                        <p class="text-xs text-[#6e6e64]">Kelola data master periode akademik</p>
                     </div>
                 </div>
 

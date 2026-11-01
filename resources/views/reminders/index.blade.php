@@ -28,7 +28,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-zinc-900">Daftar Pengingat ({{ $reminders->count() }})</h3>
-                        <p class="text-[11px] text-zinc-500">Tersimpan di tabel MySQL <code class="font-mono text-rose-600">reminders</code></p>
+                        <p class="text-[11px] text-zinc-500">Kelola jadwal pengingat harian.</p>
                     </div>
                 </div>
 

@@ -170,7 +170,7 @@
                      { title: 'Master Gejala (Symptoms)', desc: 'Katalog keluhan & gejala fisik', url: '{{ route('symptoms.index') }}', tag: 'Master' },
                      { title: 'Obat & Suplemen', desc: 'Daftar vitamin, obat & pereda nyeri', url: '{{ route('medications.index') }}', tag: 'Master' },
                      { title: 'Jadwal Pengingat', desc: 'Notifikasi & alarm minum pil', url: '{{ route('reminders.index') }}', tag: 'Fitur' },
-                     { title: 'phpMyAdmin Database', desc: 'Koneksi tabel MySQL pbo_laravel_5d', url: 'http://localhost:8081', tag: 'External' }
+                     { title: 'phpMyAdmin', desc: 'Buka panel database', url: 'http://localhost:8081', tag: 'External' }
                  ],
                  get filteredItems() {
                      if (!this.searchQuery) return this.items;

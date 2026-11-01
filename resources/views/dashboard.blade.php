@@ -13,7 +13,7 @@
                     Flo Engine Aktif
                 </span>
             </h1>
-            <p class="text-xs text-[#6e6e64] mt-1">Pemantauan siklus haid, perkiraan masa subur, dan manajemen database MySQL.</p>
+            <p class="text-xs text-[#6e6e64] mt-1">Pemantauan siklus haid, perkiraan masa subur, dan pencatatan kesehatan reproduksi.</p>
         </div>
 
         <div class="flex items-center gap-2">
@@ -244,11 +244,11 @@
                     {{-- Header with Search & Filter Tabs --}}
                     <div class="p-6 border-b border-[#fed7dc]/80 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                         <div>
-                            <div class="eyebrow-label mb-0.5">Tabel Database MySQL</div>
+                            <div class="eyebrow-label mb-0.5">Riwayat Catatan</div>
                             <h3 class="text-base font-medium heading-display text-[#14140f]">
                                 Riwayat Siklus & Haid
                             </h3>
-                            <p class="text-xs text-[#6e6e64]">Data dari tabel <code class="font-mono text-[#f43f5e] bg-rose-50 px-1 rounded">cycles</code></p>
+                            <p class="text-xs text-[#6e6e64]">Semua catatan siklus menstruasi</p>
                         </div>
 
                         {{-- Interactive Filter Tabs --}}
@@ -340,7 +340,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="6" class="py-10 text-center text-xs text-[#6e6e64]">
-                                            Belum ada catatan siklus di database MySQL.
+                                            Belum ada catatan siklus yang dicatat.
                                         </td>
                                     </tr>
                                 @endforelse
@@ -515,22 +515,6 @@
                             <p class="text-xs text-[#6e6e64] py-2 text-center">Belum ada pengingat terjadwal.</p>
                         @endforelse
                     </div>
-                </div>
-
-                {{-- phpMyAdmin Database Card --}}
-                <div class="perk-card-dark p-6 space-y-3">
-                    <div class="flex items-center justify-between">
-                        <span class="eyebrow-label text-rose-300">MySQL Database</span>
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    </div>
-                    <h4 class="text-base font-medium heading-display text-white">pbo_laravel_5d</h4>
-                    <p class="text-xs text-zinc-300 leading-relaxed">
-                        Tabel terintegrasi langsung dengan phpMyAdmin melalui port 3306.
-                    </p>
-                    <a href="http://localhost:8081" target="_blank" rel="noopener noreferrer" class="btn-pink-pill text-xs w-full justify-center">
-                        <i class="bi bi-box-arrow-up-right text-xs"></i>
-                        <span>Buka di phpMyAdmin</span>
-                    </a>
                 </div>
             </div>
         </div>

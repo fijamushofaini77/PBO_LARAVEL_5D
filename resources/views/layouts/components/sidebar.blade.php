@@ -131,7 +131,7 @@
                 <a href="http://localhost:8081" target="_blank" rel="noopener noreferrer"
                    class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-medium text-emerald-800 hover:bg-emerald-50 transition-all group"
                    :class="!sidebarExpanded ? 'justify-center' : 'justify-between'"
-                   :title="!sidebarExpanded ? 'phpMyAdmin (MySQL)' : ''">
+                   :title="!sidebarExpanded ? 'phpMyAdmin' : ''">
                     <div class="flex items-center gap-2.5 min-w-0">
                         <i class="bi bi-database-check text-sm text-emerald-600"></i>
                         <span x-show="sidebarExpanded" x-cloak>phpMyAdmin</span>

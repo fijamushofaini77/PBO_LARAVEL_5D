@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    {{-- Right Controls: Search button, MySQL indicator, Notifications dropdown, Profile pill --}}
+    {{-- Right Controls: Search button, Notifications dropdown, Profile pill --}}
     <div class="flex items-center gap-2.5">
         {{-- Command Palette Quick Button --}}
         <button type="button"
@@ -37,11 +37,6 @@
             <span class="px-1.5 py-0.2 bg-white text-[10px] font-mono border border-[#fed7dc] rounded text-zinc-500">⌘K</span>
         </button>
 
-        {{-- MySQL Status Pill --}}
-        <div class="hidden lg:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span>MySQL: pbo_laravel_5d</span>
-        </div>
 
         {{-- Notifications Dropdown Component --}}
         <div class="relative" x-data="{ notifOpen: false }">

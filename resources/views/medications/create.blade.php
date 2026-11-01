@@ -6,7 +6,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-2">
         <div>
             <h1 class="text-xl font-bold tracking-tight text-zinc-900">Tambah Obat atau Suplemen</h1>
-            <p class="text-xs text-zinc-500">Tambahkan jenis obat baru ke dalam tabel MySQL.</p>
+            <p class="text-xs text-zinc-500">Tambahkan jenis obat atau suplemen baru.</p>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="flex items-center gap-1.5 text-xs text-zinc-500">

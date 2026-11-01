@@ -28,7 +28,7 @@
                     </div>
                     <div>
                         <h3 class="text-sm font-bold text-zinc-900">Daftar Obat ({{ $medications->count() }})</h3>
-                        <p class="text-[11px] text-zinc-500">Tersimpan di tabel MySQL <code class="font-mono text-rose-600">medications</code></p>
+                        <p class="text-[11px] text-zinc-500">Kelola daftar obat dan suplemen yang dikonsumsi.</p>
                     </div>
                 </div>
 

@@ -6,7 +6,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-2">
         <div>
             <h1 class="text-xl font-bold tracking-tight text-zinc-900">Tambah Data Periode</h1>
-            <p class="text-xs text-zinc-500">Tambahkan periode akademik baru ke tabel database MySQL.</p>
+            <p class="text-xs text-zinc-500">Tambahkan periode akademik baru ke dalam sistem.</p>
         </div>
         <nav aria-label="breadcrumb">
             <ol class="flex items-center gap-1.5 text-xs text-zinc-500">
@@ -77,7 +77,7 @@
                                 <span>{{ $message }}</span>
                             </p>
                         @enderror
-                        <p class="mt-1 text-[10px] text-zinc-400">Kode unik singkatan periode (maks 10 karakter, harus unik di tabel MySQL).</p>
+                        <p class="mt-1 text-[10px] text-zinc-400">Kode unik singkatan periode (maks 10 karakter, harus unik)</p>
                     </div>
 
                     {{-- Status Switch --}}
